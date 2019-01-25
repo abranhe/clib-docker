@@ -89,6 +89,8 @@ before_install:
 script: docker run -it -v $(pwd):/src -w /src abranhe/clib sh -c "make run-test"
 ```
 
+See a real example [`.travis.yml`](https://github.com/abranhe/binary/blob/cab8abb4d6d87964043175bd2881c938d9ca9ab5/.travis.yml)
+
 ## Versioning
 
 | Docker Image Version | Clib Version |
