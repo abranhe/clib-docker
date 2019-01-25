@@ -3,6 +3,7 @@
 #
 # The MIT License (MIT) 
 # Copyright (c) 2019 Abraham Hernandez <abraham@abranhe.com>
+
 # https://github.com/abranhe/docker-clib
 # 
 # The MIT License (MIT)
