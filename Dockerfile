@@ -33,6 +33,6 @@ RUN \
     cd /tmp/clib &&\
     make &&\
     make install
-
-ENTRYPOINT ["clib"]
+    
+ENTRYPOINT ["/bin/bash"]
 
