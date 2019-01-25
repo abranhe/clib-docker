@@ -1,13 +1,12 @@
 
 [![clib](https://avatars2.githubusercontent.com/u/5657447?s=120)](https://hub.docker.com/r/abranhe/clib)
 
-# The [clib](https://github.com/clibs/clib) Docker Image
+# The [clib](https://github.com/clibs/clib) Docker Image 🐳
 
 [![starts](https://img.shields.io/docker/stars/abranhe/clib.svg?logo=docker)](https://hub.docker.com/r/abranhe/clib)
 [![pulls](https://img.shields.io/docker/pulls/abranhe/clib.svg?logo=docker)](https://hub.docker.com/r/abranhe/clib)
 [![license](https://img.shields.io/github/license/abranhe/clib-docker.svg)](https://github.com/abranhe/clib-docker/blob/master/license)
 [![automated](https://img.shields.io/docker/automated/abranhe/clib.svg?logo=docker)](https://hub.docker.com/r/abranhe/clib)
-[![automated](https://img.shields.io/docker/build/abranhe/clib-docker.svg)](https://hub.docker.com/r/abranhe/clib)
 [![cashapp](https://cdn.abranhe.com/badges/cash-me.svg)](https://cash.me/$abranhe)
 [![patreon](https://cdn.abranhe.com/badges/patreon.svg)](https://patreon.com/abranhe)
 [![abranhe](https://abranhe.com/badge.svg)](https://github.com/abranhe)
@@ -31,7 +30,7 @@ See [other ways][install-clib] to install **clib**.
 ### Set as alias
 
 ```
-alias clib='docker run --rm -t abranhe/clib'
+alias clib='docker run --rm -it abranhe/clib clib sh -c clib'
 ```
 
 ## Related
@@ -41,10 +40,11 @@ alias clib='docker run --rm -t abranhe/clib'
 ## Usage
 
 ```
-$ docker run abranhe/clib --help
+$ docker run -it \
+    abranhe/clib sh -c clib --help
 ```
 
-You will get:
+You will get:f
 
 ```
 clib <command> [options]
@@ -63,12 +63,37 @@ clib <command> [options]
 
 Learn more about [clib][clib].
 
+### Integrate with Travis-ci
+
+I decided to create thi project because I needed it in a Travis build. You can read more about the [usage of Docker in Travis builds][travis-docker]. See the below example:
+
+```yml
+language: c
+
+services:
+  - docker
+
+compiler:
+  - clang
+  - gcc
+
+before_install:
+
+  # Download the docker image
+  - docker pull abranhe/clib
+
+  # Use clib install, to install dependencies
+  - docker run -it -v $(pwd):/src -w /src abranhe/clib sh -c "clib install"
+
+# Run tests defined in the Makefile
+script: docker run -it -v $(pwd):/src -w /src abranhe/clib sh -c "make run-test"
+```
+
 ## Versioning
 
 | Docker Image Version | Clib Version |
 | :-: | :-: |
-| [`1.0.0`][docker-1.0.0] | [latest][clib] |
-| [`1.0.2`][docker-1.0.0] | [`1.8.1`][clib] |
+| [`latest`][docker-latest] | [`latest`][clib] |
 
 ## Team
 
@@ -85,5 +110,6 @@ Learn more about [clib][clib].
 [license]: https://github.com/abranhe/clib-docker/blob/master/license
 [clib]: https://github.com/clibs/clib
 [install-clib]: https://github.com/clibs/clib/blob/master/Readme.md#installation
-[docker-1.0.0]: https://hub.docker.com/r/abranhe/clib/tags/1.0.1
+[travis-docker]: https://docs.travis-ci.com/user/docker/
+[docker-latest]: https://hub.docker.com/r/abranhe/clib/tags/latest
 [clib-1.8.1]: https://github.com/clibs/clib/releases/tag/1.8.1
