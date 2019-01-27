@@ -44,7 +44,7 @@ $ docker run -it \
     abranhe/clib sh -c clib --help
 ```
 
-You will get:f
+You will get:
 
 ```
 clib <command> [options]
