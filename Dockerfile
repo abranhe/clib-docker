@@ -12,7 +12,7 @@
 # 
 
 FROM ubuntu:latest
-LABEL maintainer="Carlos Abrahama Hernandez <abraham@abranhe.com>"
+LABEL maintainer="Carlos Abraham Hernandez <abraham@abranhe.com>"
 
 # Update
 RUN \
