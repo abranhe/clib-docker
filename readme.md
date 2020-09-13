@@ -96,9 +96,8 @@ See a real example [`.travis.yml`](https://github.com/abranhe/binary/blob/cab8ab
 
 ## License
 
-[MIT][license] License © [Carlos Abraham][abranhe]
+MIT © [Carlos Abraham](https://github.com/abranhe)
 
-[license]: https://github.com/abranhe/clib-docker/blob/master/license
 [clib]: https://github.com/clibs/clib
 [install-clib]: https://github.com/clibs/clib/blob/master/Readme.md#installation
 [travis-docker]: https://docs.travis-ci.com/user/docker/
