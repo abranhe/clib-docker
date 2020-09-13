@@ -7,9 +7,6 @@
 [![pulls](https://img.shields.io/docker/pulls/abranhe/clib.svg?logo=docker)](https://hub.docker.com/r/abranhe/clib)
 [![license](https://img.shields.io/github/license/abranhe/clib-docker.svg)](https://github.com/abranhe/clib-docker/blob/master/license)
 [![automated](https://img.shields.io/docker/automated/abranhe/clib.svg?logo=docker)](https://hub.docker.com/r/abranhe/clib)
-[![cashapp](https://cdn.abranhe.com/badges/cash-me.svg)](https://cash.me/$abranhe)
-[![patreon](https://cdn.abranhe.com/badges/patreon.svg)](https://patreon.com/abranhe)
-[![abranhe](https://abranhe.com/badge.svg)](https://github.com/abranhe)
 
 ## Description
 
@@ -97,18 +94,10 @@ See a real example [`.travis.yml`](https://github.com/abranhe/binary/blob/cab8ab
 | :-: | :-: |
 | [`latest`][docker-latest] | [`latest`][clib] |
 
-## Team
-
-|[![Carlos Abraham Logo][abranhe-img]][abranhe]|
-| :-: |
-| [Carlos Abraham][abranhe] |
-
 ## License
 
 [MIT][license] License © [Carlos Abraham][abranhe]
 
-[abranhe]: https://github.com/abranhe
-[abranhe-img]: https://avatars3.githubusercontent.com/u/21347264?s=50
 [license]: https://github.com/abranhe/clib-docker/blob/master/license
 [clib]: https://github.com/clibs/clib
 [install-clib]: https://github.com/clibs/clib/blob/master/Readme.md#installation
